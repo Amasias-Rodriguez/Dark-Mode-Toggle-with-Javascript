@@ -15,5 +15,10 @@ function updateBody(){
 }
 
 inputEl.addEventListener("input", ()=>{
-    updateBody()
-})
+    updateBody();
+    updateLocalStorage()
+});
+
+function updateLocalStorage(){
+    localStorage.setItem("mode", JSON.stringify(inputEl.checked));
+}
